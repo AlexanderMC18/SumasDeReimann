@@ -1,0 +1,27 @@
+%ALexander Martinez Cisneros
+%3202
+%Sumas de Reimann
+clc, clear
+syms x;
+areatotal = 0 ;
+disp('cual es la formula');
+c=input('');
+disp('el inicio de limite');
+a=input('');
+disp('el fin de limite');
+b=input('');
+disp('cantidad de subinterbalos');
+n=input('');
+base = n;
+x = a: base: (b-base);
+altura = c ;
+area = base * altura;
+areatotal = area;
+inputParser ( 'area por rectangulo: ' , areatotal);
+
+x2 = linspace ( a , b , n );
+y2 = c ;
+xa = linspace ( a , b , n );
+yab = c ;
+g =[" sym ('int') (xa, yab, ' histc ' )"];
+plot (x2, y2);
